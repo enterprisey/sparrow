@@ -1,0 +1,236 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+    background-color: #F3F3F3;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.25em;
+}
+
+h2 {
+    font-size: 120%;
+}
+
+footer {
+    font-size: smaller;
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    font-size: smaller;
+}
+
+.collapse {
+    color: #00e;
+    cursor: pointer;
+}
+
+.collapse:hover {
+    color: #3232f1;
+    text-decoration: underline;
+}
+
+.collapse:active  {
+    color: #e00;
+}
+
+.errorbox,.warningbox,.successbox{border:1px solid;padding:.5em 1em;margin-bottom:1em;display:-moz-inline-block;display:inline-block;zoom:1;*display:inline}
+
+.warningbox {
+    color: #705000;
+    border-color: #fde29b;
+    background-color: #fdf1d1
+}
+
+#login-panel {
+    border: thin gray dashed;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+#login-panel br {
+    height: 0.15em;
+}
+
+#edit-token {
+    font-family: monospace;
+    font-size: 90%;
+    width: 25em;
+}
+
+#options {
+    margin-bottom: 1em;
+}
+
+#control-buttons {
+    float: right;
+}
+
+#save-page {
+    margin-left: 0.2em;
+}
+
+#save-indicator {
+    padding: .5em 1em;
+    border-radius: 2px;
+    border: 1px solid #a2a9b1;
+    font-weight: normal;
+    vertical-align: middle;
+    color: #222;
+    -webkit-transition: background-color 0.25s, font-weight 0.25s;
+    transition: background-color 0.25s, font-weight 0.25s;
+    cursor: pointer;
+}
+
+#save-indicator.active {
+    background-color: #eaf3ff;
+    font-weight: bold;
+}
+
+#page-controls {
+    vertical-align: middle;
+}
+
+#current-page {
+    vertical-align: middle;
+    padding: .5em 0;
+    float: left;
+}
+
+#clear-both {
+    clear: both;
+}
+
+#save-results {
+    font-size: 90%;
+    margin-top: 0.25em;
+    line-height: 2;
+}
+
+.edit-progress {
+    border: thin gray solid;
+    margin: 0 0.1em;
+    padding: 0.1em;
+}
+
+.edit-progress.pending {
+    background-color: #DDD;
+}
+
+.edit-progress.success {
+    background-color: #CFC;
+}
+
+.edit-progress.failure {
+    background-color: #FCC;
+}
+
+.ref-name {
+    font-family: monospace;
+}
+
+.errorbox {
+    border: 1px solid;
+    padding: .5em 1em;
+    margin-bottom: 1em;
+    display: -moz-inline-block;
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+
+    color: #c00;
+    border-color: #fac5c5;
+    background-color: #fae3e3;
+}
+
+#edit-panel ul {
+    margin: 0.25em 0;
+}
+
+#edit-panel span.vertical-align {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+}
+
+#edit-panel textarea {
+    width: 100%;
+    font-size: 100%;
+    padding: 0.25em;
+    min-height: 0;
+    font-family: monospace;
+}
+
+/* Dupe ref names styles */
+
+#edit-panel .display-self-closing {
+    font-style: italic;
+}
+
+#edit-panel textarea.has-button {
+    width: 83%;
+    display: inline;
+}
+
+#edit-panel div.self-closing-container {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.1em;
+}
+
+#edit-panel button.make-self-closing {
+    font-size: 90%;
+    margin-left: 0.15em;
+}
+
+#edit-panel span.duplicate-notice {
+    font-size: 90%;
+    font-style: italic;
+}
+
+/* Miscellaneous redirects styles */
+#edit-panel #tag-text {
+    padding: 0.3em;
+    font-size: large;
+    font-family: monospace;
+    width: 40em;
+}
+
+/* Skip dropdown */
+.indicator-down {
+    min-width: 12px;
+    width: 0.9375em;
+    min-height: 12px;
+    background-size: contain;
+    background-position: center center;
+    display: inline-block;
+
+    background-image: url('thttps://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/indicators/arrow-down.png');
+    background-image: -webkit-linear-gradient(transparent, transparent), url('https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/indicators/arrow-down.svg');
+    background-image: linear-gradient(transparent, transparent), url('https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/indicators/arrow-down.svg');
+    background-image: -o-linear-gradient(transparent, transparent), url('https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/indicators/arrow-down.png');
+}
+
+#skip-page-dropdown-container {
+    display: none;
+    position: fixed;
+    float: right;
+}
+
+#skip-page-dropdown-container.show {
+    display: block;
+}

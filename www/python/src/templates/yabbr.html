@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="https://tools-static.wmflabs.org/yabbr/script.js"></script>
+{% endblock %}
+
+{% block body %}
+<p>Logged in as {{ username }} (<a href="logout">logout</a>). [<span id="options-collapse" class="collapse">show options</span>]</p>
+<noscript class="errorbox">YABBR requires JavaScript</noscript>
+<div id="options" style="display: none">
+  <input type="checkbox" id="skip-unfixable" checked /><label for="skip-unfixable">Skip unfixable pages automatically</label>
+  <input type="checkbox" id="skip-selfclosing" /><label for="skip-selfclosing">Skip pages with existing self-closing tags automatically</label>
+</div>
+<div id="select-backlog">
+  Backlog:
+  <select>
+    <option value="Category:Pages with duplicate reference names">Pages with duplicate reference names</option>
+    <option value="Category:Miscellaneous redirects">Miscellaneous redirects</option>
+  </select>
+  <span id="backlog-size"></span>
+</div>
+<div id="page-controls">
+  <span id="current-page">
+    Current page:
+    <span id="current-page-name"></span>
+  </span>
+  <div id="control-buttons">
+    <span class="mw-ui-button-group">
+      <button id="skip-page" class="mw-ui-button">Skip page</button>
+      <button id="skip-page-dropdown-toggle" class="mw-ui-button"><span class="indicator-down"></span></button>
+    </span>
+    <button id="save-page" class="mw-ui-button mw-ui-progressive">Save page</button>
+    <span id="save-indicator">0</span>
+  </div>
+  <div id="skip-page-dropdown-container">
+    <button id="skip-page-random" class="mw-ui-button">Skip to random page</button>
+  </div>
+</div>
+<div id="clear-both"></div>
+<div id="save-results" style="display: none;">
+  <p class="notice">When you save a page, progress/results will appear here.</p>
+  <div id="save-statistics">This session: <span id="save-statistics-counter">0 edits</span> made</div>
+</div>
+<div id="edit-panel"></div>
+<pre id="page-text"></pre>
+{% endblock %}

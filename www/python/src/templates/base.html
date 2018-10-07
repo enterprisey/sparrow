@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>YABBR - Yet Another Backlog Burninator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://tools-static.wmflabs.org/yabbr/mw.css" rel="stylesheet" />
+  <link href="https://tools-static.wmflabs.org/yabbr/core.css" rel="stylesheet" />
+  {% block head %}{% endblock %}
+</head>
+
+<h1>YABBR &ndash; Yet Another Backlog Burninator</h1>
+<nav><a href="https://tools.wmflabs.org/apersonbot/">Tools</a> &gt; <b>YABBR</b></nav>
+
+<div id=flash-container>
+  {% for message in get_flashed_messages() %}
+  <div class=flash>{{ message }}</div>
+  {% endfor %}
+</div>
+
+{% block body %}{% endblock %}
+
+<footer>
+  <a href="https://en.wikipedia.org/wiki/User:Enterprisey" title="Enterprisey's user page on the English Wikipedia">Enterprisey</a> (<a href="https://en.wikipedia.org/wiki/User_talk:Enterprisey" title="Enterprisey's talk page on the English Wikipedia">talk!</a>) • <a href="https://github.com/APerson241/yabbr" title="Source code on GitHub">Source code</a> • <a href="https://github.com/APerson241/yabbr/issues" title="Issues on GitHub">Issues</a>
+</footer>
